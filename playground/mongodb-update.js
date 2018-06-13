@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     }); */
 
   db.collection('Users').findOneAndUpdate({
-    name: 'Pooja'
+    name: 'Abhi'
   }, {
       $inc: {
         age: 2
