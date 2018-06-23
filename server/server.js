@@ -1,3 +1,5 @@
+require('./config/config');
+
 const _ = require('lodash');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -158,7 +160,7 @@ app.delete('/users/me/token', authenticate, (req, res) => {
 
   });
 });
-
+console.log(process.env.MONGODB_URI);
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });
